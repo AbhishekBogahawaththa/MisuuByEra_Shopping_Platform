@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misuu by ERA</title>
+  <script src="https://kit.fontawesome.com/1490cc174f.js" crossorigin="anonymous"></script> <!-- Replace 'yourkitid' with your FontAwesome kit ID -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white font-sans">
+
+  <!-- Header -->
+  <header class="shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="text-2xl font-bold text-gray-800 tracking-wide">
+        <span class="text-pink-500">Misuu</span> by ERA
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-gray-600 text-sm font-medium">
+        <a href="#" class="hover:text-pink-500 transition">Home</a>
+        <a href="#" class="hover:text-pink-50 transition">Shop</a>
+        <a href="#" class="hover:text-pink-500 transition">About</a>
+        <a href="#" class="hover:text-pink-500 transition">Contact</a>
+      </nav>
+
+      <!-- Right Icons -->
+      <div class="flex items-center space-x-4 text-gray-600">
+        <!-- Search -->
+        <div class="hidden md:flex items-center bg-gray-100 px-2 py-1 rounded-md">
+          <input type="text" placeholder="Search" class="bg-transparent outline-none text-sm w-24" />
+          <i class="fas fa-search text-sm text-gray-500"></i>
+        </div>
+
+        <!-- User Icon -->
+        <a href="#" class="hover:text-pink-500">
+          <i class="fas fa-user text-lg"></i>
+        </a>
+
+        <!-- Cart Icon -->
+        <a href="#" class="hover:text-pink-500 relative">
+          <i class="fas fa-shopping-bag text-lg"></i>
+          <span class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs rounded-full px-1">2</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="#" class="block text-gray-700 hover:text-pink-500">Home</a>
+      <a href="#" class="block text-gray-700 hover:text-pink-500">Shop</a>
+      <a href="#" class="block text-gray-700 hover:text-pink-500">About</a>
+      <a href="#" class="block text-gray-700 hover:text-pink-500">Contact</a>
+    </div>
+  </header>
+
+  <section x-data="{
+    current: 0,
+    slides: [
+        {
+            Image: 'assets/image-1.jpg',
+            title: 'Discover the New You',
+            subtitle: 'Trendy fits for every season',
+        },
+        {
+            image: 'assets/image-2.jpg',
+            title: 'Bold. Stylish. Misuu.',
+            subtitle: 'Unleash your confidence in fashion',
+        },
+        {
+            image: 'assets/image-3.jpg',
+            title: 'Fresh Arrivals',
+            subtitle: 'Step into the season with flair',
+        }
+    ],
+    next() { this.current = (this.current + 1) % this.slides.length },
+    prev() { this.current = (this.current - 1 + this.slides.length) % this.slides.length }
+}" class="relative w-full h-[500px] overflow-hidden">
+  <!-- Slides -->
+  <template x-for="(slide, index) in slides" :key="index">
+    <div x-show="current === index" x-transition:enter="transition-opacity duration-700" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="absolute inset-0 w-full h-full">
+      <img :src="slide.image" alt="" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <!-- Slide Text -->
+      <div class="absolute top-1/2 transform -translate-y-1/2 left-0 w-full">
+        <div class="max-w-7xl mx-auto px-4 text-white space-y-4">
+          <h2 x-text="slide.title" class="text-4xl md:text-5xl font-bold"></h2>
+          <p x-text="slide.subtitle" class="text-lg md:text-xl font-light"></p>
+          <button class="mt-2 px-6 py-2 bg-pink-500 hover:bg-pink-600 transition rounded-full text-sm font-semibold">
+            Shop Now <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Controls -->
+  <div class="absolute inset-0 flex justify-between items-center px-6 z-10">
+    <button @click="prev()" class="bg-black bg-opacity-30 text-white p-2 rounded-full hover:bg-opacity-60 transition">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button @click="next()" class="bg-black bg-opacity-30 text-white p-2 rounded-full hover:bg-opacity-60 transition">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>
