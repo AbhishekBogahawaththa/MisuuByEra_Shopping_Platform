@@ -22,6 +22,7 @@
     next() { this.current = (this.current + 1) % this.slides.length },
     prev() { this.current = (this.current - 1 + this.slides.length) % this.slides.length }
 }" class="relative w-full h-[500px] overflow-hidden">
+
   <!-- Slides -->
   <template x-for="(slide, index) in slides" :key="index">
     <div x-show="current === index" x-transition:enter="transition-opacity duration-700" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" class="absolute inset-0 w-full h-full">
@@ -40,6 +41,7 @@
       </div>
     </div>
   </template>
+
      <!-- Controls -->
   <div class="absolute inset-0 flex justify-between items-center px-6 z-10">
     <button @click="prev()" class="bg-black bg-opacity-30 text-white p-2 rounded-full hover:bg-opacity-60 transition">
