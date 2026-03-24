@@ -204,8 +204,8 @@ Open [http://localhost:8080/MisuuByEra](http://localhost:8080/MisuuByEra) in you
 
 ## License
 
-This project is developed and maintained by **Bogahawaththa P.B.P.A** as a personal project.
+This project is developed and maintained by **Abhisheak bogahawaththa** as a personal project.
 
 All rights reserved. Unauthorized copying, distribution, or commercial use of this project is strictly prohibited without prior written permission from the developer.
 
-© 2025 MisuuByEra — Bogahawaththa P.B.P.A
+© 2025 MisuuByEra — Abhishek Bogahawaththa
