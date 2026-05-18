@@ -9,7 +9,7 @@
 ### Key Features
 
 - **Product Listing & Browsing**: Explore a wide range of fashion items with category filters and search.
-- **Shopping Cart**: Add, update, and remove items from the cart with real-time price calculation.
+- **Shopping Cart**: Add, update, and remove items from the cart with real-time price calculation..
 - **User Authentication**: Secure registration and login system for customers and admins.
 - **Admin Dashboard**: Manage products, orders, inventory, and customers from a dedicated admin panel.
 - **Order Management**: Track and manage customer orders from placement to delivery.
