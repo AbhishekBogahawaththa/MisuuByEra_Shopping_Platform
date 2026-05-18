@@ -178,7 +178,6 @@ Open [http://localhost:8080/MisuuByEra](http://localhost:8080/MisuuByEra) in you
 
 ## Limitations
 
-
 - **No real-time stock updates**: Inventory is updated on order confirmation only.
 - **Basic security**: Passwords are not yet hashed with BCrypt or similar.
 - **No email notifications**: Order confirmation emails are not yet implemented.
