@@ -8,6 +8,7 @@
 
 ### Key Features
 
+
 - **Product Listing & Browsing**: Explore a wide range of fashion items with category filters and search.
 - **Shopping Cart**: Add, update, and remove items from the cart with real-time price calculation..
 - **User Authentication**: Secure registration and login system for customers and admins.
