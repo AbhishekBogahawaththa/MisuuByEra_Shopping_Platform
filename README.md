@@ -19,6 +19,7 @@
 
 ### Project Objectives
 
+
 - Build a complete **end-to-end e-commerce platform** from frontend to backend.
 - Implement **secure user authentication** with role-based access (customer vs admin).
 - Integrate a **real payment gateway (HелаPay)** for processing online transactions.
