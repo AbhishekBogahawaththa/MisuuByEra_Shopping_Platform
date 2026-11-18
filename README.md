@@ -6,6 +6,7 @@
 
 📄 **For setup instructions, see the [Getting Started](#getting-started) section below**
 
+
 ### Key Features
 
 - **Product Listing & Browsing**: Explore a wide range of fashion items with category filters and search.
